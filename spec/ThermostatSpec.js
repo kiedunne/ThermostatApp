@@ -18,7 +18,14 @@ describe("Theromostat", function(){
   });
 
   describe("can change the temperature", function(){
-
+    it('increases it by 1 by default', function(){
+      thermostat.increaseTemperature();
+      expect(thermostat.temperature).toEqual(21);
+    });
+    it('decreases it by 1 by default', function(){
+      thermostat.decreaseTemperature();
+      expect(thermostat.temperature).toEqual(19);
+    });
     it("by increasing it", function(){
       thermostat.increaseTemperature(5);
       expect(thermostat.temperature).toEqual(25);
