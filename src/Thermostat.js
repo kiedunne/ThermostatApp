@@ -9,6 +9,7 @@ Thermostat.prototype.currentTemperature = function(){
 };
 
 Thermostat.prototype.increaseTemperature = function(value){
+  if ((this.temperature + value) > this.maxTemperature ) {throw Error("Exceeds maximum temperature")};
   this.temperature = this.temperature + value;
 };
 

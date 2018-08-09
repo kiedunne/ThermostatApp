@@ -33,6 +33,16 @@ describe("Theromostat", function(){
       expect(function () {thermostat.decreaseTemperature(11);}).toThrowError("Exceeds minimum temperature of 10");
     });
 
+    it("but can not go above max temperature when Power Saving mode is on", function(){
+      thermostat.changePowerSavingMode('ON')
+      expect(function () {thermostat.increaseTemperature(6);}).toThrowError("Exceeds maximum temperature");
+    });
+
+    it("but can not go above max temperature when Power Saving mode is off", function(){
+      thermostat.changePowerSavingMode('OFF')
+      expect(function () {thermostat.increaseTemperature(13);}).toThrowError("Exceeds maximum temperature");
+    });
+
   });
 
   describe("has a Power Saving mode", function(){
