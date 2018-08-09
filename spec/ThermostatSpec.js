@@ -41,7 +41,6 @@ describe("Theromostat", function(){
     });
 
     it("but can not go above max temperature when Power Saving mode is on", function(){
-      thermostat.changePowerSavingMode('ON')
       expect(function () {thermostat.increaseTemperature(6);}).toThrowError("Exceeds maximum temperature");
     });
 
@@ -50,20 +49,6 @@ describe("Theromostat", function(){
       expect(function () {thermostat.increaseTemperature(13);}).toThrowError("Exceeds maximum temperature");
     });
 
-  });
-
-  describe("has a Power Saving mode", function(){
-    it("and is ON by default", function(){
-      expect(thermostat.isPowerSavingOn()).toEqual(true);
-    });
-    it("and returns true if its ON", function(){
-      thermostat.changePowerSavingMode('ON');
-      expect(thermostat.isPowerSavingOn()).toEqual(true);
-    });
-    it("and returns false if its OFF", function(){
-      thermostat.changePowerSavingMode('OFF');
-      expect(thermostat.isPowerSavingOn()).toEqual(false);
-    });
   });
 
   describe("has a reset button", function(){
