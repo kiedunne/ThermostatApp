@@ -19,7 +19,8 @@ Thermostat.prototype.decreaseTemperature = function(value = 1){
 };
 
 Thermostat.prototype.changePowerSavingMode = function(button){
-  if (button === 'ON' ) { this.maxTemperature = 25 }
+  if (button === 'ON' && (this.temperature <= 25)) { this.maxTemperature = 25 }
+  if (button === 'ON' && (this.temperature > 25)) {this.maxTemperature = 25, this.temperature = 25}
   if (button === 'OFF') { this.maxTemperature = 32 }
 };
 
