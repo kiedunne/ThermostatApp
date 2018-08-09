@@ -58,4 +58,12 @@ describe("Theromostat", function(){
       expect(thermostat.isPowerSavingOn()).toEqual(false);
     });
   });
+
+  describe("has a reset button", function(){
+    it("and returns the temperature to 20 degrees", function(){
+      thermostat.increaseTemperature(4);
+      thermostat.resetThermostat();
+      expect(thermostat.temperature).toEqual(20);
+    });
+  });
 });
