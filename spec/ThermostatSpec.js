@@ -32,7 +32,20 @@ describe("Theromostat", function(){
     it("but can not go below 10 degrees", function(){
       expect(function () {thermostat.decreaseTemperature(11);}).toThrowError("Exceeds minimum temperature of 10");
     });
+
   });
 
-
+  describe("has a Power Saving mode", function(){
+    it("and is ON by default", function(){
+      expect(thermostat.isPowerSavingOn()).toEqual(true);
+    });
+    it("and returns true if its ON", function(){
+      thermostat.changePowerSavingMode('ON');
+      expect(thermostat.isPowerSavingOn()).toEqual(true);
+    });
+    it("and returns false if its OFF", function(){
+      thermostat.changePowerSavingMode('OFF');
+      expect(thermostat.isPowerSavingOn()).toEqual(false);
+    });
+  });
 });
