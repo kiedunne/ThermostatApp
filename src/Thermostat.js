@@ -24,8 +24,8 @@ Thermostat.prototype.isPowerSavingOn = function(){
 };
 
 Thermostat.prototype.changePowerSavingMode = function(button){
-  if (button === 'ON') { this.maxTemperature = 25 }
-  if (button === 'OFF') { this.maxTemperature = 32 }
+  if (button === 'ON') { this.maxTemperature = 32 }
+  if (button === 'OFF') { this.maxTemperature = 25 }
 };
 
 Thermostat.prototype.resetThermostat = function(){
