@@ -5,14 +5,19 @@
   </head>
   <body>
     <center><h1>THERMOSTAT</h1></center>
-    <center>
-      <h2 id="temperature" style="display: inline;"></h2>
+    <center><h2> Current temperature in London</h2>
+      <h2 style="display: inline;"></h2>
+      <h2 id="current-temperature" style="display: inline;"></h2>
       <h2 style="display: inline;">&#176;C</h2>
+      <p><h2> Current thermostat temperature</h2>
+        <h2 id="temperature" style="display: inline;"></h2>
+        <h2 style="display: inline;">&#176;C</h2>
+      </p>
     </center>
-    <center><p><button id="temp-up"><i class="fas fa-angle-double-up"></i></button></p>
-      <p><button id="temp-down"><i class="fas fa-angle-double-down"></i></button></p>
+    <center><p><button id="temp-up"><i class="fas fa-angle-double-up"></i> Increase </button></p>
+      <p><button id="temp-down"><i class="fas fa-angle-double-down"></i> Decrease </button></p>
     </center>
-    <br><center><button id="reset"><i class="fas fa-redo"></i></button></center></br>
+    <br><center><button id="reset">R <i class="fas fa-redo"></i> set</button></center></br>
     <br><center><button id="powersaver-on"><i class="fas fa-power-off"></i> PowerSaver on</button><center></br>
     <br><center><button id="powersaver-off"><i class="fas fa-power-off"></i> PowerSaver off</button><center></br>
     <script src="src/Thermostat.js"></script>

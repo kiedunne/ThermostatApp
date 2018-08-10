@@ -2,6 +2,10 @@ $(document).ready(function() {
   var thermostat = new Thermostat();
   updateTemperature();
 
+  $.get('http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=bf2af1e7a6110d131268a1c3bdb9606f&units=metric', function(data) {
+    $('#current-temperature').text(data.main.temp);
+  })
+
   $('#temp-up').click(function (){
     thermostat.increaseTemperature();
     updateTemperature();
