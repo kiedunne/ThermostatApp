@@ -1,6 +1,8 @@
+My first program using Javascript 
+
 # Thermostat
 
-You will build the logic needed to model a simple thermostat.
+You will TDD the logic needed to model a simple thermostat, and creating a UI web app to communicate with it .
 
 ### Specification:
 
@@ -13,6 +15,6 @@ You will build the logic needed to model a simple thermostat.
 * Power saving mode is on by default
 * You can reset the temperature to 20 with a reset function
 * You can ask about the thermostat's current energy usage: < 18 is `low-usage`, < 25 is `medium-usage`, anything else is `high-usage`.
-* (In the challenges where we add an interface, low-usage will be indicated with green, medium-usage indicated with black, high-usage indicated with red.)
+* Make it so the text for the current tempersture will change colour depending on the energy usuage level: low-usage will be indicated with green, medium-usage indicated with blue, high-usage indicated with red.
 
 * Use Jasmine to Test-Drive Development of a thermostat
